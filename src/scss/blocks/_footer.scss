@@ -1,0 +1,9 @@
+.footer {
+  border-top: 2px solid $color-secondary;
+
+  &__text {
+    font-size: 14px;
+    color: $color-secondary;
+    text-align: center;
+  }
+}
