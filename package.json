@@ -1,0 +1,21 @@
+{
+  "name": "safedeal-frontend-trainee",
+  "version": "1.0.0",
+  "description": "Тестовое задание для стажировки в Авито",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinokurovAlexander/safedeal-frontend-trainee.git"
+  },
+  "author": "Vinokurov Alexander",
+  "license": "ISC",
+  "homepage": "https://github.com/VinokurovAlexander/safedeal-frontend-trainee#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
