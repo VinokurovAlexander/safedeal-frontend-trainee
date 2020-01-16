@@ -53,5 +53,6 @@ export default class ModalController {
 
   hide() {
     this._modalComponent.hide();
+    this._modalComponent.getElement().querySelector('form').reset();
   }
 }
