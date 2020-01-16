@@ -12,6 +12,6 @@ api.getImages()
     imagesModel.setImages(images);
 
     const mainElement = document.querySelector(`main`);
-    const imagesController = new ImagesController(mainElement, imagesModel);
+    const imagesController = new ImagesController(mainElement, imagesModel, api);
     imagesController.render();
   });

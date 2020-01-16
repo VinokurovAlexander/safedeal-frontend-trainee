@@ -2,7 +2,13 @@
 @import 'global/_global';
 @import 'mixin/_mixin';
 
+@import 'blocks/_close-btn';
+@import 'blocks/_images-list';
+@import 'blocks/_comments-list';
 @import 'blocks/_container';
 @import 'blocks/_page-main';
 @import 'blocks/_footer';
-@import 'blocks/_images-list';
+@import 'blocks/_modal';
+@import 'blocks/_form';
+@import 'blocks/_btn';
+

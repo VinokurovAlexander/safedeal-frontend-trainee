@@ -1,0 +1,17 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  padding-bottom: 50px;
+
+  background-color: white;
+
+  &__btn {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+  }
+}
