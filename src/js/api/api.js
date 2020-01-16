@@ -30,4 +30,9 @@ export default class API {
         throw err;
       });
   }
+
+  getImage(id) {
+    return this._load({url: `${id}`})
+      .then((response) => response.json())
+  }
 }

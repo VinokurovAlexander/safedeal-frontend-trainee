@@ -12,11 +12,15 @@ const createImageTemplate = (image) => (
 export default class Image extends AbstractComponent {
   constructor(data) {
     super();
-    
+
     this._data = data;
   }
 
   getTemplate() {
     return createImageTemplate(this._data);
+  }
+
+  setClickHandler(handler) {
+    this.getElement().addEventListener(`click`, handler);
   }
 }
