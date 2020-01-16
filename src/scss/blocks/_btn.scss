@@ -7,4 +7,11 @@
 
   color: white;
   text-align: center;
+
+  transition: opacity 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
 }

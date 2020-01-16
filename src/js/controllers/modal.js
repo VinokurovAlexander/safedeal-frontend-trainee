@@ -16,6 +16,9 @@ export default class ModalController {
     this._modalComponent = new Modal(image, image.comments);
     render(this._container, this._modalComponent, RenderPosition.BEFOREEND);
     this._isRender = true;
+
+    this._modalComponent.setCloseBtnClickHandler(() => this._modalComponent.hide());
+    this._modalComponent.setOverlayClickHandler(() => this._modalComponent.hide());
   }
 
   show() {
