@@ -32,12 +32,19 @@ export default class Modal extends AbstractComponent {
     )
   }
 
+  _setClickHandler(element, handler) {
+    this.getElement().querySelector(element).addEventListener('click', handler);
+  }
+
   setCloseBtnClickHandler(handler) {
-    this.getElement().querySelector('.modal__btn').addEventListener('click', handler);
+    this._setClickHandler('.modal__btn', handler);
   }
 
   setOverlayClickHandler(handler) {
-    console.log(this.getElement().querySelector('.modal__overlay'));
-    this.getElement().querySelector('.modal__overlay').addEventListener('click', handler);
+    this._setClickHandler('.modal__overlay', handler);
+  }
+
+  setSubmitHandler(handler) {
+    this.getElement().addEventListener('submit', handler);
   }
 }

@@ -19,8 +19,7 @@ export default class ImageController {
     this._api.getImage(image.id)
       .then((image) => this._modalModel.setImage(image));
 
-    this._modalController = new ModalController(this._container, this._modalModel);
-
+    this._modalController = new ModalController(this._container, this._modalModel, this._api);
 
     this._imageComponent.setClickHandler(() => this._modalController.show());
   }

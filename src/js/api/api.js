@@ -1,8 +1,6 @@
 const Method = {
   GET: `GET`,
-  POST: `POST`,
-  PUT: `PUT`,
-  DELETE: `DELETE`
+  POST: `POST`
 };
 
 const checkStatus = (response) => {
@@ -34,5 +32,14 @@ export default class API {
   getImage(id) {
     return this._load({url: `${id}`})
       .then((response) => response.json())
+  }
+
+  addComment(id, comment) {
+    return this._load({
+      url: `${id}/comments`,
+      method: Method.POST,
+      body: JSON.stringify(comment),
+      headers: new Headers({'Content-Type': `application/json`})
+    })
   }
 }
