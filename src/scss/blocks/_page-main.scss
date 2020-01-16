@@ -1,4 +1,8 @@
 .page-main {
+  @include desktop {
+    min-height: 690px;
+  }
+
   &__title {
     font-size: 36px;
     line-height: 42px;
