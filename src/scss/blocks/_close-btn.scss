@@ -7,11 +7,11 @@
   background-color: transparent;
   border: none;
 
-  transition: opacity 0.5s;
+  transition: opacity $transition-time-main;
 
   &:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: $opacity-hover;
   }
 
   &:after,

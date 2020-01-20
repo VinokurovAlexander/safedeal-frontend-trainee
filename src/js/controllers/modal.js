@@ -20,8 +20,6 @@ export default class ModalController {
     render(this._container, this._modalComponent, RenderPosition.BEFOREEND);
     this._isRender = true;
 
-    this._modalComponent.setCloseBtnClickHandler(() => this._modalComponent.hide());
-    this._modalComponent.setOverlayClickHandler(() => this._modalComponent.hide());
     this._modalComponent.setSubmitHandler((evt) => {
       evt.preventDefault();
 

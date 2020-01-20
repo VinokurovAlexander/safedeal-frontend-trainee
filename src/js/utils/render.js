@@ -3,14 +3,6 @@ export const RenderPosition = {
   BEFOREEND: `beforeend`
 };
 
-/**
- * Рендер элемента
- *
- * @param {object} container - Дом узел контейнера.
- * @param {object} component - Компонент для рендера.
- * @param {string} place - Место размещения элемента: в начале потомков контейнера или в конце.
- *
- */
 export const render = (container, component, place) => {
   switch (place) {
     case RenderPosition.AFTERBEGIN:

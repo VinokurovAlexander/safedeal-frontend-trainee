@@ -41,7 +41,7 @@
   }
 
   &__img {
-    transition: opacity 0.8s;
+    transition: opacity $transition-time-main;
 
     @include desktop {
       width: 229px;

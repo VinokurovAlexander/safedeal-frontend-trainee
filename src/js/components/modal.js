@@ -1,6 +1,7 @@
 import AbstractComponent from "./abstract-components";
 import {createFormTemplate} from "./form";
 import {createCommentsListTemplate} from "./comment";
+import {isEscEvent} from "../utils/esc-press";
 
 export default class Modal extends AbstractComponent {
   constructor(image, comments) {
@@ -8,6 +9,11 @@ export default class Modal extends AbstractComponent {
 
     this._image = image;
     this._comments = comments;
+
+    this._onEscKeyDown = this._onEscKeyDown.bind(this);
+    this.hide = this.hide.bind(this);
+
+    this._subscribeOnEvents();
   }
 
   getTemplate() {
@@ -36,12 +42,30 @@ export default class Modal extends AbstractComponent {
     this.getElement().querySelector(element).addEventListener('click', handler);
   }
 
-  setCloseBtnClickHandler(handler) {
-    this._setClickHandler('.modal__btn', handler);
+  _setCloseBtnClickHandler() {
+    this._setClickHandler('.modal__btn', () => {
+      this.hide();
+    });
   }
 
-  setOverlayClickHandler(handler) {
-    this._setClickHandler('.modal__overlay', handler);
+  _setOverlayClickHandler() {
+    this._setClickHandler('.modal__overlay', () => {
+      this.hide();
+    });
+  }
+
+  _onEscKeyDown(evt) {
+    isEscEvent(evt, this.hide);
+  }
+
+  _setEscKeyDown() {
+    document.addEventListener('keydown', this._onEscKeyDown);
+  }
+
+  _subscribeOnEvents() {
+    this._setOverlayClickHandler();
+    this._setCloseBtnClickHandler();
+    this._setEscKeyDown();
   }
 
   setSubmitHandler(handler) {
